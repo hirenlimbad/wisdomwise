@@ -1,0 +1,16 @@
+
+.ToolTip{
+    position: relative;
+    display: inline-block;
+    background-color: rgb(18, 13, 13);
+    padding: 4px;
+    border-radius: 4px;
+}
+
+.ToolTip button{
+    margin-right: 3px;
+    border: 2px solid;
+    color: rgba(255, 255, 255, 0.847);
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.164);
+}

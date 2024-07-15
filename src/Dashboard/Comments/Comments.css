@@ -1,0 +1,25 @@
+
+.comments-dashboard{
+    height: 100%;
+    width: 42%;
+    color: white;
+    font-size: 20px;
+    position: fixed;
+    z-index: 10000;
+    background-color: #33313c;
+    margin-top: -1.3%;
+    padding: 1% 2%;
+    overflow-y: scroll;
+    padding-bottom: 7%;
+    /* changing scroll bar width */
+    scrollbar-width: none;
+}
+
+
+.commentContainer .card{
+    border: none;
+}
+
+.addComment{
+    display: flex;
+}

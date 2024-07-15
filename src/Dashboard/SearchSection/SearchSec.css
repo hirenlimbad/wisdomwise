@@ -1,0 +1,139 @@
+
+.search-container{
+    width: 36%;
+    height: 50%;
+    position: fixed;
+    left: 49%;
+    top: 70%;
+    transform: translate(-50% , -50%);
+    padding: 1%;
+    border-radius: 11px;
+    background-color: #2a2739 !important;
+    border: rgba(255, 255, 255, 0.536) 1px solid;
+  }
+  
+.search-box{
+    width: 100%;
+    position: relative;
+    display: flex;
+  
+  }
+  .search-input{
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px ;
+    outline: none;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.873);
+    font-weight: 500;
+    position: sticky;
+    max-height: 50%;
+    resize: none;
+    background-color: #4b5070 !important;
+
+  }
+  .search-button{
+    margin-left: 10px;
+    text-align: center;
+    height: 51px;
+    width: 50px;
+    outline: none;
+    cursor: pointer;
+    border: 1px solid #111d5e;
+    border-radius:  10px;
+    background: rgba(255, 255, 255, 0.842);
+    font-size: 20px;
+    color: black !important;
+  }
+
+.search-button i{
+    color: black;
+}
+  .second{
+    font-size: 17px;
+  }
+  .font-weight-bold {
+    font-weight: bold;
+  }
+
+  
+  /* questions */
+    .questions{
+        position: absolute;
+        width: 94%;
+        background: #44475e;
+        border: 1px solid rgba(255, 255, 255, 0.266);
+        border-radius: 10px;
+        z-index: 1;
+        overflow: hidden;
+        cursor: pointer;
+        color: white;
+    }
+
+    .question{
+        padding: 10px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.166);
+        cursor: pointer;
+    }
+
+    author{
+        color: blue;
+        font-weight: bold;
+    }
+
+    emotion{
+        font-weight: bold;
+        color: green;
+    }
+
+
+
+    /* SearchSec.css */
+
+
+.suggestions {
+    position: absolute;
+    top: 60%;
+    left: 0;
+    right: 0;
+    background: white;
+    border: 1px solid #ccc;
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+    z-index: 1000;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.suggestions li {
+    border-bottom: solid 1px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.suggestions div:hover {
+    background-color: #f0f0f0;
+    border: solid red;
+}
+
+@media screen and (max-width: 900px) {
+    .search-container {
+        width: 50%;
+        height: 50%;
+        top: 50%;
+        padding: 10px 3px;
+    }
+}
+
+
+/* responsive */
+@media screen and (max-width: 600px) {
+    .search-container {
+        width: 95%;
+        height: 60%;
+        top: 40%;
+        padding: 10px 3px;
+        
+    }
+}

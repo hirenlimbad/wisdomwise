@@ -1,0 +1,414 @@
+
+
+/* adding the style in css*/
+
+
+:root {
+  --primary-colors: #93a3ecbc;     /* Full post */
+  --secondary-color: #f0f0f000;     /* Quote */
+  --bg-gradient: linear-gradient(150deg, #f4a84bbc 0%, #f0f0f0 100%);
+  --text-color: #1c1e21e6;
+  --text-author-color: #1c1e2188;
+  --card-background-color: rgba(255, 166, 0, 0.699);
+  --card-background-color: rgba(217, 255, 0, 0.699);
+}
+
+.contNav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 10%;
+    position: fixed;
+    z-index: 1000;
+    top: -1%;
+    width: 42%;
+    height: 8%;
+    background-color: #4a506c;
+    border-radius: 10px;
+  } 
+
+.contNav ul{
+  display: flex;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.482);
+  justify-content: space-around;
+  width: 100%;
+  padding-top: 10px;
+}
+
+.contNav ul li{
+  list-style: none;
+  cursor: pointer;
+  font-size: 1.4rem;
+  padding: 10px;
+}
+
+ul .active{
+  color: white;
+  /* background-color: black; */
+  border-radius: 5px;
+  padding: 5px;
+}
+
+
+.card {
+  overflow: hidden;
+  min-width: 100%;
+  max-height: 100%;
+  border-radius: 3px;
+  color: black;
+  font-family: 'Alice', sans-serif;
+  height: auto;
+  border-bottom: 3px solid rgba(0, 0, 0, 0.509);
+}
+
+.card-header {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.username{
+  font-size: 1.2rem;
+  color: #9bb9f8;
+  text-transform: capitalize;
+  color: white;
+  color: var(--text-color);
+  color: rgba(255, 255, 255, 0.793);
+
+}
+
+.tagline {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #7388bc;
+  color: var(--text-color);
+  color: rgba(255, 255, 255, 0.73);
+
+}
+
+
+.quote{
+  font-size: 1.5  rem;
+  font-family: serif;
+  color: #80a9ff;
+  color: white;
+  color: black;
+  color: var(--text-color);
+  color: rgba(255, 255, 255, 0.850);
+  font-weight: 500;
+}
+
+
+.author{
+  font-size: 1.2rem;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: #6f87ba;
+  margin-top: 10px;
+  color: var(--text-author-color);
+  color: rgba(255, 255, 255, 0.749);
+  font-weight: 300;
+}
+
+.grey1{
+  background-color: rgba(255, 255, 255, 0.08);
+  color: white;
+}
+
+.card i{
+  cursor: pointer;
+  color: #aebfe4e9;
+  color: var(--text-color);
+  color: rgba(255, 255, 255, 0.807);
+  font-size: 20px;
+}
+
+.card span{
+  margin-right: 10px;
+  color: #aebfe4e9;
+  color: var(--text-color);
+  color: white;
+
+  color: rgba(255, 255, 255, 0.807);
+}
+
+.second{
+  font-size: 14px;
+  margin: 5px;
+  color: white;
+}
+
+.profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.card-body {
+  padding: 10px;
+}
+
+.image-container {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.post-image {
+  width: 100%;
+  height: auto;
+}
+
+.card-footer {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.3rem;
+  /* disable */
+  user-select: none;
+}
+
+.left{
+  display: flex;
+  align-self: start;
+}
+
+.l-child{
+  margin-right: 10px;
+}
+
+
+
+.quote-container{
+  background-color: var(--secondary-color);
+  font-size: 1.5rem;
+  padding: 0px 10px;
+  font-family: 'AR One Sans', sans-serif;
+}
+
+
+
+
+
+
+/* q-collection section */
+
+.q-collection{
+  margin-top: 8%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  flex-shrink: 1;
+  padding-bottom: 10%;
+  width: 100%;
+  border-top: 0px;
+  padding: 0px 10px;
+}
+
+
+.share-options{
+  display: none;
+  position: absolute;
+  z-index: 1000;
+}
+
+.messageBox{
+  z-index: 1000;
+  align-items: center;  
+}
+
+  /* responsive */
+
+@media screen and (max-width: 768px) {
+  .card {
+    min-width: 95%;
+  }
+  .q-collection{
+    justify-content: space-around;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .card {
+    min-width: 94%;
+  }
+
+  .q-collection{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    margin: 0;
+  }
+
+  .contNav{
+    position: fixed;
+    width: 100% !important;
+    margin-top: 1.5%;
+    background-color: #292837;
+    align-items: center;
+    border-radius: 0px;
+    
+  }
+  .contNav li{
+    font-size: 1rem !important;
+    margin: 0%;
+  }
+  
+  .q-collection{
+    margin: 15% 2% 5% 0%;
+  }
+}
+
+
+.messageBx{
+  display: none;
+  position: absolute;
+  z-index: 1000;
+}
+
+
+
+
+
+
+
+
+
+.hide{
+  display: none;
+}
+
+.show{
+  display: block;
+}
+
+@media screen and (max-width: 768px) {
+  .show{
+    margin-left: -2%;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin: 0 auto;
+    margin-top: 20%;
+  }
+}
+
+
+
+
+.editable{
+  color: #ffffff89;
+  font-size: 1.3rem;
+}
+
+.ThoughtMechanism  textarea{
+  width: 140%;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: inherit;
+  background: #33313c;
+  color: white;
+}
+
+
+.addComment textarea::placeholder{
+  color: rgba(255, 255, 255, 0.822);
+}
+
+.post button{
+  min-width: 100px;
+  height: 5%;
+  margin-left: 4%;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #292b3c;
+  color: white;
+  font-size: 1.2rem;
+  border: none;
+  cursor: pointer;
+}
+
+.post button:disabled{
+  background-color: rgb(26, 25, 26);
+  opacity: 0.5;
+  width: 100px;
+  cursor: not-allowed;
+}
+
+.editable{
+  color: #ffffff89;
+}
+
+.ThoughtMechanism  textarea{
+  width: 140%;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: inherit;
+  background: #33313c;
+  color: white;
+}
+
+
+.addComment textarea::placeholder{
+  color: rgba(255, 255, 255, 0.822);
+}
+
+.post button{
+  width: 30%;
+  height: 5%;
+  margin-left: 4%;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #292b3c;
+  color: white;
+  font-size: 1.2rem;
+  border: none;
+  cursor: pointer;
+}
+
+/* responsive */
+@media screen and (max-width: 768px) {
+.comments-dashboard{
+  width: 100%;
+  border-radius: 0%;
+}
+.commentContainer .card{
+  min-width: 100%;
+}
+}
+
+.ThoughtMechanism {
+  display: flex;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.08);
+  margin: 5px 10px;
+  margin-left: 10px;
+  border-radius: 2px;
+  border-top: solid 1px rgba(0, 0, 0, 0.205);
+}
+
+.ThoughtMechanism img{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+
+.userImage{
+  margin: 12px;
+}
+
+.ThoughtMechanism .left-side{
+  border: solid red;
+  padding-left: 10px;
+}
+
+.userImageChild{
+  margin: 10px;
+}

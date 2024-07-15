@@ -1,0 +1,411 @@
+
+
+.unselectable {
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Standard */
+}
+
+body{
+    background-color: #1a1a1a;
+    color: white;
+    font-family: 'Amethysta', serif;
+}
+
+.ShareQuotePage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ShareQuotePage .left{
+    display: block;
+    width: 50%;
+    margin: auto;
+    height: 100vh;
+    align-items: center;
+}
+
+.ShareQuotePage .message{
+    margin-top: 2%;
+    margin-left: 5%;
+    font-size: 1rem;
+    color: #7b7b7b;
+}
+
+.ShareQuotePage .SelectSize{
+    width: 100%;
+    color: rgba(255, 255, 255, 0.692);
+    display: none;
+}
+
+.ShareQuotePage .SelectSize ul{
+    display: flex;
+    justify-content: start;
+    list-style-type: none;
+}
+
+
+.ShareQuotePage .SelectSize li{
+    margin: 14px;
+    cursor: pointer;
+    align-items: center;
+    padding: 10px;
+    font-size: 1.2rem;
+}
+
+.ShareQuotePage .SelectSize li:hover{
+    background-color: rgba(255, 255, 255, 0.164);
+    border-radius: 10px;
+}
+
+
+.ShareQuotePage .SelectSize .square{
+    margin-left: 40%;
+    height: 20px;
+    width:  20px;
+    border: 2px solid rgba(255, 255, 255, 0.692);
+}
+
+.ShareQuotePage .SelectSize .rectangle{
+    margin-left: 40%;
+    height: 30px;
+    width:  20px;
+    border: 2px solid rgba(255, 255, 255, 0.692);
+
+}
+.ShareQuotePage .SelectSize .tweet-post{
+    margin-left: 40%;
+    width: 30px;
+    height:  20px;
+    border: 2px solid rgba(255, 255, 255, 0.692);
+}
+
+
+
+
+
+
+
+
+
+.ShareQuotePage .ShareQuoteContainer p {
+    margin-top: 2%;
+}
+
+
+
+.ShareQuotePage .ShareQuoteContainer {
+    border-radius: 10px;
+    margin-top: 4%;
+    margin-left: 4%;
+    display: flex;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: scroll;
+    scrollbar-width: none;
+}
+
+
+
+.ShareQuotePage .Quote{
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+}
+
+
+.ShareQuotePage .author{
+    text-align: center;
+    margin-top: 10px;
+}
+
+.ShareQuotePage .Quote .authorImage{
+    border-radius: 10px;
+    width: 100%;
+}
+
+.ShareQuotePage .rectangle img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+
+
+
+.ShareQuotePage .checkmark span{
+    width: 50px;
+    height: 50px;
+    margin-top: 20px;
+    color: red !important;
+}
+
+
+.ShareQuotePage .right{
+    font-size: 1.3rem;
+    margin: 15px;
+    width: 30%;
+}
+
+.ShareQuotePage  .colorSelector{
+    width: 100%;
+    overflow-x: scroll;
+}
+
+.ShareQuotePage  .colorSelector::-webkit-scrollbar {
+    display: none;
+}
+.ShareQuotePage .colorButton {
+    width: 40px;
+    height: 40px;
+    border: none;
+    margin: 5px ;
+    cursor: pointer;
+    border-radius: 50%;
+    border: solid 2px rgba(255, 255, 255, 0.778);
+}
+
+
+.ShareQuotePage  .fontSizeInput {
+    border: none;
+    margin: 5px;
+    border-radius: 5px;
+    text-align: center;
+
+    --active: #;
+    --value: #fff;
+    --line: #CDD9ED;
+    touch-action: none;
+	 -webkit-appearance: none;
+ 	 appearance: none;
+    user-select: none;
+    width: 320px;
+    height: 2px;
+    border-radius: 1px;
+    background: var(--line);
+    position: relative;
+}
+
+.ShareQuotePage  .fontSizeInput::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--value);
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 0 0 2px var(--active);
+}
+
+.ShareQuotePage  .fontSelector select{
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+    background-color: rgba(255, 255, 255, 0.163);
+    color: white;
+}
+
+.ShareQuotePage  .fontSelector option{
+    background-color: rgba(0, 0, 0, 0.527);
+    color: black;
+}
+
+.ShareQuotePage  .fontSelector option:hover{
+    background-color: rgba(0, 0, 0, 0.527);
+    color: white;
+}
+
+.ShareQuotePage  .fontSelector{
+    width: 100%;
+    margin-top: 10px;
+}
+
+.ShareQuotePage  .textAlignment{
+    margin-bottom: 0px;
+}
+
+.ShareQuotePage  .textAlignment .buttons{
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+}
+
+.ShareQuotePage  .textAlignment .buttons button{
+    background-color: rgba(255, 255, 255, 0.164);
+    border: none;
+    padding: 15px;
+    margin-right: 15px;
+    color: white;
+    border-radius: 4px;
+}
+
+.ShareQuotePage .textAlignment .button:hover{
+    background-color: rgba(255, 255, 255, 0.329);
+}
+
+.textAlignment .buttons .active{
+    background-color: rgba(255, 255, 255, 0.329) !important;
+    border: solid 3px rgba(255, 255, 255, 0.416) !important;
+}
+
+
+.finalized button, .showHide button{
+    display: none;
+    padding: 10px;
+    background-color: #1f2a43be;
+    color: white;
+    border: 2px solid rgba(89, 114, 183, 0.491);
+    margin-top: 5%;
+    margin-right: 4%;
+    border-radius: 4px;
+}
+
+
+.watermark{
+    mix-blend-mode: difference;
+    font-size: 0.8rem;
+    position: absolute;
+    align-self: last baseline;
+    opacity: 0.3;
+}
+
+.watermark:hover{
+    opacity: 1;
+}
+
+.right {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.optionGroup {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.164);
+    transition: 2s;
+}
+
+.SelectSize .active{
+    background-color: rgba(255, 255, 255, 0.164);
+}
+
+.optionGroup p:hover{
+    cursor: pointer;
+}
+
+.preview{
+    color: rgba(255, 255, 255, 0.464);
+    margin: -25px 0px -10px 0px ;
+}
+
+
+
+
+/* for responsive */
+@media only screen and (max-width: 600px) {
+    .ShareQuotePage {
+        display: block;
+    }
+
+    .ShareQuotePage  .SelectSize{
+        display: none !important;
+        height: 20%;
+    }
+
+    .ShareQuotePage  .SelectSize ul{
+        width: 100%;
+    }
+
+
+    .ShareQuotePage .SelectSize ul li{
+        margin-left: -25px;
+        font-size: 1rem;
+        text-align: center;
+        padding-right: 18px !important;
+    }
+
+    .ShareQuotePage  .SelectSize ul li div:last-child{
+        margin-left: 19px;
+        margin-top: 8px;
+    }
+
+
+    .ShareQuotePage  .preview{
+        margin-top: 0px;
+    }
+    .ShareQuotePage   .left {
+        width: 100%;
+    }
+    
+    .ShareQuotePage   .right {
+        margin-top: 50%;
+        width: 90%;
+        display: none;
+    }
+
+    .ShareQuotePage  .ShareQuoteContainer p {
+        margin-top: 0;
+    }
+
+    .ShareQuotePage   .ShareQuoteContainer {
+        padding: 10px;
+        margin: 5% 5%;
+        width: 90% !important;
+    }
+
+    .ShareQuotePage  .Quote {
+        padding: 10px;
+    }
+
+    .ShareQuotePage  .fontSizeInput {
+        width: 100%;
+    }
+
+    .ShareQuotePage  .colorSelector {
+        width: 100%;
+    }
+
+    .ShareQuotePage  .colorButton {
+        width: 30px;
+        height: 30px;
+    }
+
+    .ShareQuotePage   .fontSelector select {
+        width: 100%;
+    }
+
+    .ShareQuotePage   .fontSelector {
+        width: 100%;
+    }
+
+    .ShareQuotePage  .textAlignment .buttons {
+        margin-top: 5%;
+    }
+
+    .ShareQuotePage  .finalized {
+        display: flex;
+    }
+
+    .ShareQuotePage  .finalized button{
+        font-size: 1rem;
+    }
+
+    .ShareQuotePage  .optionGroup {
+        padding: 5px;
+    }
+
+   .ShareQuotePage  .message{
+        margin-top: 10%;
+    }
+}
+

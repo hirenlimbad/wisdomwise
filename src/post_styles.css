@@ -1,0 +1,59 @@
+
+
+/*  color collection */
+/* .blue-white{
+    background: linear-gradient(150deg, #3568f7bc 0%, #f59090 100%);
+    background: linear-gradient(150deg, #ffffffbc 0%, #f1e6e6 100%);
+} */
+
+/* .purple-white{
+    background: linear-gradient(150deg, #a35cf7bc 0%, #f59090 100%);
+    background: linear-gradient(150deg, #cdd6f1bc 0%, #f1e6e6 100%);
+
+}
+
+.green-white{
+    background: linear-gradient(150deg, hsla(203, 100%, 92%, 0.737) 10%, #3660a094 100%);
+    background: linear-gradient(150deg, #cdd6f1bc 0%, #f1e6e6 100%);
+
+}
+
+.red-white{
+    background: linear-gradient(150deg, #de4e4ebc 0%, #ffbaba 100%);
+    background: linear-gradient(150deg, #cdd6f1bc 0%, #f1e6e6 100%);
+
+}
+
+.orange-white{
+    background: linear-gradient(150deg, #f7a35cbc 0%, #ffbaba 100%);
+    background: linear-gradient(150deg, #cdd6f1bc 0%, #f1e6e6 100%);
+
+}
+
+.yellow-white{
+    background: linear-gradient(150deg, #f7f75cbc 0%, #ffbaba 100%);
+    background: linear-gradient(150deg, #cdd6f1bc 0%, #f1e6e6 100%);
+
+} */
+
+
+
+.grey2{
+    background-color: rgba(27, 39, 69, 0.774);
+}
+
+.grey3{
+    background-color: rgba(30, 57, 95, 0.774);
+}
+
+.grey4{
+    background-color: #343a6a82;
+}
+
+.grey5{
+    background-color: rgba(21, 40, 66, 0.774);
+}
+
+.grey6{
+    background-color: rgba(16, 48, 94, 0.774);
+}

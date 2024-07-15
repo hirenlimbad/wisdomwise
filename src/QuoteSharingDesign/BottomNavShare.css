@@ -1,0 +1,23 @@
+.MuiBottomNavigationAction-label  {
+    padding-left: 8px;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.777);
+}
+
+.BottomNavigation{
+    overflow: scroll;
+    scrollbar-width: none;
+}
+
+.BottomNavigation svg{
+    color: white;
+}
+
+@media only screen and (max-width: 600px) {
+    .BottomNavigation {
+        width: 100% !important;
+        border-radius: 0 !important;
+        /* adding left padding that shrinks and grows dynamically */
+        padding-left: 50%;
+    }
+}

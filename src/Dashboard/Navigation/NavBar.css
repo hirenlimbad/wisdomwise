@@ -1,0 +1,25 @@
+
+
+.navbar{
+    display: flex;
+    justify-content: start;
+    position: absolute !important;
+}
+
+.navbar img{
+    border-radius: 50%;
+    width: 40px;
+}
+
+.navbar .username{
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.navbar a{
+    color: black !important;
+    cursor: pointer;
+    font-size: 20px;
+    margin-left: 10px;
+}
+

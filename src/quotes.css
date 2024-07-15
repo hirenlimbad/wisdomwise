@@ -1,0 +1,115 @@
+
+:root {
+  --primary-colors: #93a3ecbc;     /* Full post */
+  --secondary-color: #f0f0f000;     /* Quote */
+  --bg-gradient: linear-gradient(150deg, #f4a84bbc 0%, #f0f0f0 100%);
+}
+  .card {
+  overflow: hidden;
+  border-radius: 10px;
+  margin: 10px;
+  height: 100%;
+  color: black;
+  min-width: 100% !important;
+}
+
+  .card-header {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+  }
+
+  .username{
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .user-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .username,
+  .tagline {
+    margin: 0;
+  }
+
+  .card-header .right{
+   /* aligning to the right side of card */
+    margin-left: auto;
+
+  }
+
+  .card-body {
+    padding: 10px;
+  }
+  
+  .image-container {
+    max-width: 100%;
+    overflow: hidden;
+  }
+  
+  .post-image {
+    width: 100%;
+    height: auto;
+}
+
+.card-footer {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.3rem;
+  }
+
+  .left{
+    display: flex;
+    align-self: start;
+  }
+
+  .l-child{
+    margin-right: 10px;
+  }
+
+
+
+  .quote-container{
+    background-color: var(--secondary-color);
+    font-size: 1.5rem;
+    padding: 0px 10px;
+    font-family: 'AR One Sans', sans-serif;
+}
+
+.author{
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+
+
+i{
+  cursor: pointer;
+}
+
+
+/* q-collection section */
+
+.q-collection{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Add this to your existing CSS */
+.q-collection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }

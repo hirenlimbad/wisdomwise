@@ -1,0 +1,51 @@
+
+
+.dashcontainer{
+  display: flex;
+  }
+
+.dashcontainer .child{
+  width: 33.33%;
+}
+
+.dashcontainer .dynamic {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px;
+  height: 650px;
+  width: 50%;
+}
+
+
+/* personal profile */
+
+.dashcontainer .homeButton{
+  display: none;
+}
+
+.dashcontainer .prof-container {
+  width: 100%;
+  margin-left: -5%;
+}
+
+@media only screen and (max-width: 600px) { 
+    .sideNavParent{
+      width: 0% !important;
+    }
+
+    .qot{
+      display: none;
+    }
+
+    .dynamic{
+      width: 100% !important;
+    }
+
+    .dashcontainer .prof-container {
+      width: 100%;
+      margin-left: 0%;
+    }
+  
+}
+
+
