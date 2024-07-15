@@ -7,7 +7,7 @@ function ThoughtMechanism({ thoughtid }) {
     const [likes, setLikes] = useState(0);
 
     useEffect(() => {
-        axios.post('http://localhost:3001/getThought', {thoughtid: thoughtid} ,{ withCredentials: true })
+        axios.post('https://wisdomwise.onrender.com/getThought', {thoughtid: thoughtid} ,{ withCredentials: true })
             .then(res => {
                 setThought(res.data.thought);
                 setLiked(res.data.thought.isLiked);
@@ -24,7 +24,7 @@ function ThoughtMechanism({ thoughtid }) {
         setLiked(updatedLiked);
         setLikes(updatedLiked ? likes + 1 : likes - 1);
 
-        axios.post('http://localhost:3001/likeThought', { thoughtid: thoughtid, liked: updatedLiked }, { withCredentials: true })
+        axios.post('https://wisdomwise.onrender.com/likeThought', { thoughtid: thoughtid, liked: updatedLiked }, { withCredentials: true })
             .catch(err => {
                 console.error(err);
                 setLiked(!updatedLiked);

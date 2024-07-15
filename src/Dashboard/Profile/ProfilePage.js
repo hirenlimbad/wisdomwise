@@ -21,7 +21,7 @@ function ProfilePage() {
 
     useEffect(() => {
         if (!username || username === 'undefined' || username === 'null' || username === 'profile') {
-            axios.get('http://localhost:3001/getUserName', { withCredentials: true })
+            axios.get('https://wisdomwise.onrender.com/getUserName', { withCredentials: true })
                 .then(res => {
                     console.log("user name is: ",res.data.useridpub);
                     setUsername(res.data.useridpub);
@@ -31,7 +31,7 @@ function ProfilePage() {
     }, []);
 
     useEffect(() => {
-        axios.get(`http://localhost:3001/profile/${username}`, { withCredentials: true })
+        axios.get(`https://wisdomwise.onrender.com/profile/${username}`, { withCredentials: true })
             .then(res => {
                 setUser(res.data);
                 if (res.data.showEdit) {
@@ -46,7 +46,7 @@ function ProfilePage() {
     }, [username]);
 
     const loadMoreQuotes = () => {
-        axios.get(`http://localhost:3001/quotes/${username}?page=${page}&limit=10`)
+        axios.get(`https://wisdomwise.onrender.com/quotes/${username}?page=${page}&limit=10`)
             .then(res => {
                 setQuotes(prevQuotes => [...prevQuotes, ...res.data]);
                 setPage(prevPage => prevPage + 1);
@@ -71,7 +71,7 @@ function ProfilePage() {
 
     function followPage() {
         setFollowLoad(true);
-        axios.post('http://localhost:3001/follow', { username: username }, { withCredentials: true })
+        axios.post('https://wisdomwise.onrender.com/follow', { username: username }, { withCredentials: true })
             .then(res => {
                 if (res.data.message === 'Followed') {
                     setFollow(true);
@@ -85,7 +85,7 @@ function ProfilePage() {
     }
 
     function checkFollow() {
-        axios.post('http://localhost:3001/checkFollow', { username: username }, { withCredentials: true })
+        axios.post('https://wisdomwise.onrender.com/checkFollow', { username: username }, { withCredentials: true })
             .then(res => {
                 setFollow(res.data.isFollowing);
             })

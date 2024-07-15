@@ -45,7 +45,7 @@ function AddQuote() {
         }
 
         try {
-            const response = await axios.post("http://localhost:3001/addQuote", { quote, author }, { withCredentials: true });
+            const response = await axios.post("https://wisdomwise.onrender.com/addQuote", { quote, author }, { withCredentials: true });
             if (response.data.message === 'Success') {
                 setSnackbarMessage('Quote added successfully!');
                 setSnackbarSeverity('success');

@@ -13,7 +13,7 @@ function Quotes() {
     const [quotes, setQuote] = useState([])
 
     useEffect(() => {
-        axios.get('http://localhost:3001/getQuotes')
+        axios.get('https://wisdomwise.onrender.com/getQuotes')
             .then(res => {
                 setQuote(res.data)
                 console.log(res.data)
@@ -31,7 +31,7 @@ function Quotes() {
     }, []);
     const fetchLikedStatus = () => {
         const quoteId = quotes._id;
-        axios.post('http://localhost:3001/isLiked', { quoteId }, { withCredentials: true })
+        axios.post('https://wisdomwise.onrender.com/isLiked', { quoteId }, { withCredentials: true })
             .then(res => {
                 console.log(res.data);
                 setLiked(res.data.isLiked);
@@ -54,7 +54,7 @@ function Quotes() {
         const quoteIndex = quotes.findIndex(quote => quote._id === quoteId);
 
         // Send a POST request to the server to update the like count in the database
-        axios.post('http://localhost:3001/updateLikeCount', { quoteId }, { withCredentials: true })
+        axios.post('https://wisdomwise.onrender.com/updateLikeCount', { quoteId }, { withCredentials: true })
             .then(res => {
                 console.log(res.data);
 
@@ -95,7 +95,7 @@ function Quotes() {
 
         const bookmrkIndex = quotes.findIndex(quote => quote._id === quoteId);
 
-        axios.post('http://localhost:3001/updateBookmarkCount', { quoteId }, { withCredentials: true })
+        axios.post('https://wisdomwise.onrender.com/updateBookmarkCount', { quoteId }, { withCredentials: true })
             .then(res => {
                 
             })

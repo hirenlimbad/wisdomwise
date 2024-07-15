@@ -29,7 +29,7 @@ function ThoughtContainer({ quoteId }) {
 
     function postThought() {
         var thought = document.querySelector('.editable').innerText;
-        axios.post('http://localhost:3001/postThought', {thought: thought, quoteId:quoteId}, { withCredentials: true })
+        axios.post('https://wisdomwise.onrender.com/postThought', {thought: thought, quoteId:quoteId}, { withCredentials: true })
             .then(res => {
                 console.log(  "New thought id: " ,[res.data.thoughtid]);
                 setThoughts([res.data.thoughtid, ...thoughts]);
@@ -39,7 +39,7 @@ function ThoughtContainer({ quoteId }) {
 
     useEffect(() => {
         // getting the thoghts
-        axios.post('http://localhost:3001/getThoughts', { quoteId: quoteId }, { withCredentials: true })
+        axios.post('https://wisdomwise.onrender.com/getThoughts', { quoteId: quoteId }, { withCredentials: true })
             .then(res => {
                 console.log("Thoughts id data is: ", res.data);
                 setThoughts(res.data)

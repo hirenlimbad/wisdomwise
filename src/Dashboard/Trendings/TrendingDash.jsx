@@ -11,7 +11,7 @@ function TrendingDash() {
     const [topTrending, setTopTrending] = React.useState([]);
     const [authorTrend, setAuthorTrend] = React.useState([]);
     useEffect(() => {
-        axios.get('http://localhost:3001/getTopTrending')
+        axios.get('https://wisdomwise.onrender.com/getTopTrending')
             .then(res => {
                 console.log("quoteof of the dayy.....", res.data);
                 setTopTrending(res.data.topTrending[0]);

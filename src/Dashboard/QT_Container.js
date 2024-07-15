@@ -24,7 +24,7 @@ const QT_Container = memo(function QT_Container(quoteid_predefined) {
         };
         setLoading(true);
         try {
-            const res = await axios.get(`http://localhost:3001/getQuotes?page=${pageNumber}&limit=${limit}`, { withCredentials: true });
+            const res = await axios.get(`https://wisdomwise.onrender.com/getQuotes?page=${pageNumber}&limit=${limit}`, { withCredentials: true });
             const ids = res.data.map(quote => quote._id);
             console.log(ids);
             setQuoteIds(prevIds => [...new Set([...prevIds, ...ids])]);
@@ -69,7 +69,7 @@ const QT_Container = memo(function QT_Container(quoteid_predefined) {
             const clientHeight = document.documentElement.clientHeight;
 
             if (scrollTop + clientHeight >= scrollHeight - 500) {
-                axios.post('http://localhost:3001/getFollowedPosts', { following: true }, { withCredentials: true })
+                axios.post('https://wisdomwise.onrender.com/getFollowedPosts', { following: true }, { withCredentials: true })
                     .then(res => {
                         if (res.data.length === 0) {
                             setMessageBx('Follow More Users to see their new quotes');
@@ -110,7 +110,7 @@ const QT_Container = memo(function QT_Container(quoteid_predefined) {
         following.style.display = 'block';
 
         if (following.style.display === 'block') {
-            axios.post('http://localhost:3001/getFollowedPosts', { following: true }, { withCredentials: true })
+            axios.post('https://wisdomwise.onrender.com/getFollowedPosts', { following: true }, { withCredentials: true })
                 .then(res => {
                     if (res.data.length === 0) {
                         setMessageBx('  Follow more users to see there new quotes.');

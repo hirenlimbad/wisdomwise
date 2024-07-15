@@ -8,7 +8,7 @@
 
         const [userDetails, setUserDetails] = useState([])
         useEffect(() => {
-            axios.get('http://localhost:3001/getUserName', { withCredentials: true }, { headers: { 'Content-Type': 'application/json' } })
+            axios.get('https://wisdomwise.onrender.com/getUserName', { withCredentials: true }, { headers: { 'Content-Type': 'application/json' } })
                 .then(res => {
                     console.log("User data.")
                     console.log(res.data)

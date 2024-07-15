@@ -1,7 +1,7 @@
 require('dotenv').config();
 const mongoose = require('mongoose');
 
-const uri = process.env.MONGODB_URI || 'mongodb://localhost:27017/quote_plateform';
+const uri = process.env.MONGODB_URI || 'mongodb+srv://hirenngood:RKOz410y20B1fmuH@wisdomwise.langpsw.mongodb.net/?retryWrites=true&w=majority&appName=wisdomwise';
 
 async function connectToDatabase() {
   try {

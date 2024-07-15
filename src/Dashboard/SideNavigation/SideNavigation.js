@@ -20,7 +20,7 @@ function SideNavigation({ setActiveComponent }) {
 
     useEffect(() => {
         if (!username || username === 'undefined' || username === 'null' || username === 'profile') {
-            axios.get('http://localhost:3001/getUserName', { withCredentials: true })
+            axios.get('https://wisdomwise.onrender.com/getUserName', { withCredentials: true })
                 .then(res => {
                     setUsername(res.data.useridpub);
                     // setting username in local storage
@@ -52,9 +52,9 @@ function SideNavigation({ setActiveComponent }) {
                     <li onClick={() => handleNavigationClick('trending')} className={activeComponent === 'trending' ? 'active' : ''}>
                         <a> <WhatshotIcon /> Trending</a>
                     </li>
-                    <li onClick={() => handleNavigationClick('search')} className={activeComponent === 'search' ? 'active' : ''}>
+                    {/* <li onClick={() => handleNavigationClick('search')} className={activeComponent === 'search' ? 'active' : ''}>
                         <a> <SearchIcon /> Search</a>
-                    </li>
+                    </li> */}
                     <li onClick={() => handleNavigationClick('addQuote')} className={activeComponent === 'addQuote' ? 'active' : ''}>
                         <a> <AddCircleOutlineIcon /> Post Quote</a>
                     </li>

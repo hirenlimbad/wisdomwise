@@ -24,7 +24,7 @@ function QuoteMechanism({ quoteId, backgroundColor, onClick }) {
     const getNewQuote = useCallback(() => {
         setLoggedUserProfileImage(localStorage.getItem('profileImage'));
         console.log("getting quote")
-        axios.post('http://localhost:3001/getNewQuote', { quoteId }, { withCredentials: true })
+        axios.post('https://wisdomwise.onrender.com/getNewQuote', { quoteId }, { withCredentials: true })
             .then(response => {
                 setQuote(response.data);
                 setLiked(response.data.isLiked);
@@ -39,7 +39,7 @@ function QuoteMechanism({ quoteId, backgroundColor, onClick }) {
 
     const getProfileImage = useCallback(() => {
         if (quote.useridpub) {
-            axios.post('http://localhost:3001/getProfileImage', { params: { userid: quote.useridpub } })
+            axios.post('https://wisdomwise.onrender.com/getProfileImage', { params: { userid: quote.useridpub } })
                 .then(response => {
                     setProfileImage(response.data.profileImage)
                 })
@@ -64,7 +64,7 @@ function QuoteMechanism({ quoteId, backgroundColor, onClick }) {
             setCopied(false);
         }, 3000);
 
-        axios.post('http://localhost:3001/copyQuote', { quoteId: quote.quoteId }, { withCredentials: true })
+        axios.post('https://wisdomwise.onrender.com/copyQuote', { quoteId: quote.quoteId }, { withCredentials: true })
             .catch(err => {
                 console.log("Error in likeQuote");
                 console.log(err);
@@ -72,12 +72,12 @@ function QuoteMechanism({ quoteId, backgroundColor, onClick }) {
     };
 
     const shareQuote = () => {
-        navigator.clipboard.writeText("http://localhost:3000/quote/" + quote.quoteId.toString());
+        navigator.clipboard.writeText("https://wisdomwise.onrender.com/quote/" + quote.quoteId.toString());
         setShared(true);
         setTimeout(() => {
             setShared(false);
         }, 3000);
-        axios.post('http://localhost:3001/shareQuote', { quoteId: quote.quoteId }, { withCredentials: true })
+        axios.post('https://wisdomwise.onrender.com/shareQuote', { quoteId: quote.quoteId }, { withCredentials: true })
             .catch(err => {
                 console.log("Error in likeQuote");
                 console.log(err);
@@ -89,7 +89,7 @@ function QuoteMechanism({ quoteId, backgroundColor, onClick }) {
         setLiked(updatedLiked);
         const updatedQuote = { ...quote, like_count: updatedLiked ? quote.like_count + 1 : quote.like_count - 1 };
         setQuote(updatedQuote);
-        axios.post('http://localhost:3001/updateLikeCount', { quoteId: quote.quoteId }, { withCredentials: true })
+        axios.post('https://wisdomwise.onrender.com/updateLikeCount', { quoteId: quote.quoteId }, { withCredentials: true })
             .catch(err => {
                 console.log("Error in likeQuote");
                 console.log(err);
@@ -104,7 +104,7 @@ function QuoteMechanism({ quoteId, backgroundColor, onClick }) {
         setBookmarked(updatedBookmarked);
         const updatedQuote = { ...quote, bookmark_count: updatedBookmarked ? quote.bookmark_count + 1 : quote.bookmark_count - 1 };
         setQuote(updatedQuote);
-        axios.post('http://localhost:3001/updateBookmarkCount', { quoteId: quote.quoteId }, { withCredentials: true })
+        axios.post('https://wisdomwise.onrender.com/updateBookmarkCount', { quoteId: quote.quoteId }, { withCredentials: true })
             .catch(err => {
                 console.log("Error in bookmarkQuote");
                 console.log(err);
@@ -124,7 +124,7 @@ function QuoteMechanism({ quoteId, backgroundColor, onClick }) {
     };
 
     const loadThoughts = () => {
-        axios.post('http://localhost:3001/getThoughts', { quoteId: quoteId }, { withCredentials: true })
+        axios.post('https://wisdomwise.onrender.com/getThoughts', { quoteId: quoteId }, { withCredentials: true })
             .then(res => {
                 console.log("Thoughts id data is: ", res.data);
                 setThoughts(res.data);
@@ -154,7 +154,7 @@ function QuoteMechanism({ quoteId, backgroundColor, onClick }) {
 
     function postThought() {
         var thought = document.getElementsByClassName(quoteId)[0];
-        axios.post('http://localhost:3001/postThought', { thought: thought.innerText, quoteId: quoteId }, { withCredentials: true })
+        axios.post('https://wisdomwise.onrender.com/postThought', { thought: thought.innerText, quoteId: quoteId }, { withCredentials: true })
             .then(res => {
                 console.log("New thought id: ", [res.data.thoughtid]);
                 setThoughts([res.data.thoughtid, ...thoughts]);

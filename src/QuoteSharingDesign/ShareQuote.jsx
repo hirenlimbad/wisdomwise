@@ -211,7 +211,7 @@ function ShareQuote() {
         const quoteId = url.split("/").pop();
 
         // fetching the quote from the database
-        axios.post('http://localhost:3001/getQuoteById', { quoteId })
+        axios.post('https://wisdomwise.onrender.com/getQuoteById', { quoteId })
             .then(response => {
                 setQuote([response.data.quote, response.data.author_name]);
             })

@@ -22,7 +22,7 @@ const Profile_Setting = ({ userId }) => {
 
   useEffect(() => {
     // Fetch the user data when the component mounts
-    axios.get('http://localhost:3001/getUserDetails', { withCredentials: true })
+    axios.get('https://wisdomwise.onrender.com/getUserDetails', { withCredentials: true })
       .then(response => {
         setUser(response.data);
       })
@@ -65,7 +65,7 @@ const Profile_Setting = ({ userId }) => {
       }
     }
 
-    axios.post('http://localhost:3001/updateUser', formData, {
+    axios.post('https://wisdomwise.onrender.com/updateUser', formData, {
       withCredentials: true,
       headers: { 'Content-Type': 'multipart/form-data' }
     })
