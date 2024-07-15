@@ -118,9 +118,8 @@ ul .active{
 
 .card i{
   cursor: pointer;
-  color: #aebfe4e9;
-  color: var(--text-color);
   color: rgba(255, 255, 255, 0.807);
+  color: white;
   font-size: 20px;
 }
 

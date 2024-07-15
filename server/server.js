@@ -83,7 +83,14 @@ app.post('/login', async (req, res) => {
             console.log("email login")
             const sessionid = uuidv4();
             setUser(sessionid, users);
-            res.cookie('sessionid', sessionid);
+            res.cookie('sessionid', sessionid,
+                {
+                    httpOnly: true,
+                    secure: true,
+                    sameSite: 'none',
+                    maxAge: 1000 * 60 * 60 * 24 * 7 // 1 week
+                }
+            );
             res.status(200).json({ message: 'Success' });
         }
 
@@ -91,7 +98,12 @@ app.post('/login', async (req, res) => {
             console.log("user_id login")
             const sessionid = uuidv4();
             setUser(sessionid, user_id);
-            res.cookie('sessionid', sessionid);
+            res.cookie('sessionid', sessionid, {
+                httpOnly: true,
+                secure: true,
+                sameSite: 'none',
+                maxAge: 1000 * 60 * 60 * 24 * 7 // 1 week
+            });
             res.status(200).json({ message: 'Success' });
         }
         else {
