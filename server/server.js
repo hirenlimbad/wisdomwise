@@ -448,7 +448,7 @@ app.get('/getBookmarks', checkLoggedIn, async (req, res) => {
     let bookmarkedIds = []
 
     // adding bookmark id's
-    BookmarkModel.find({ user: user._id })
+    BookmarkModel.find({ user: user })
         .then(bookmarks => {
             bookmarks.forEach(bookmark => {
                 bookmarkedIds.push(bookmark.quote);
@@ -474,7 +474,7 @@ app.get('/getLikes', checkLoggedIn, async (req, res) => {
     let likeIds = []
 
     // adding bookmark id's
-    LikeModel.find({ user: user._id })
+    LikeModel.find({ user: user })
         .then(Likes => {
             Likes.forEach(Likes => {
                 likeIds.push(Likes.quote);
