@@ -72,7 +72,6 @@ function QuoteMechanism({ quoteId, backgroundColor, onClick }) {
     };
 
     const shareQuote = () => {
-        navigator.clipboard.writeText("https://wisdomwise.onrender.com/quote/" + quote.quoteId.toString());
         setShared(true);
         setTimeout(() => {
             setShared(false);
