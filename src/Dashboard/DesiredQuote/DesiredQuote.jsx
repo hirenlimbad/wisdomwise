@@ -10,7 +10,7 @@ function DesiredQuote({ desire }) {
             const getLikedQuotes = async () => {
                 console.log('requesting liked quotes');
                 try {
-                    const ids = await axios.get('http://localhost:3001/getLikes', { withCredentials: true });
+                    const ids = await axios.get('https://wisdomwise.onrender.com/getLikes', { withCredentials: true });
                     console.log(ids.data);
                     setQuoteIds(ids.data);
                 } catch (err) {
@@ -25,7 +25,7 @@ function DesiredQuote({ desire }) {
             const getBookmarkedQuotes = async () => {
                 console.log('requesting bookmarked quotes');
                 try {
-                    const ids = await axios.get('http://localhost:3001/getBookmarks', { withCredentials: true });
+                    const ids = await axios.get('https://wisdomwise.onrender.com/getBookmarks', { withCredentials: true });
                     console.log(ids.data);
                     setQuoteIds(ids.data);
                 } catch (err) {
@@ -39,7 +39,7 @@ function DesiredQuote({ desire }) {
             const getTrendingQuotes = async () => {
                 console.log('requesting trending quotes');
                 try {
-                    const ids = await axios.get('http://localhost:3001/getTrending', { withCredentials: true });
+                    const ids = await axios.get('https://wisdomwise.onrender.com/getTrending', { withCredentials: true });
                     console.log(ids.data);
                     setQuoteIds(ids.data);
                 } catch (err) {

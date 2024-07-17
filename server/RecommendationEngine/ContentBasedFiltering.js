@@ -386,7 +386,7 @@ class ContentBasedFiltering {
 
         let seenQuotes = await seenQuote.find({ user: this.userId, seen_at: { "$gte": lastUpdateDate } })
         let seenCount = seenQuotes.length;
-        if (seenCount >= 10) {
+        if (seenCount >= 50) {
             console.log('Interest updating...');
             await this.setInterest(this.userId);
         }

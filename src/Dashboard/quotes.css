@@ -230,8 +230,9 @@ ul .active{
 
 @media screen and (max-width: 550px) {
   .card {
-    min-width: 94%;
+    min-width: 80% !important;
   }
+  
 
   .q-collection{
     display: flex;
