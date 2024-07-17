@@ -44,6 +44,11 @@ function ShareQuote() {
     const quoteRef = useRef(null);
     const container = document.getElementById('print');
 
+    // after loading the page scroll to the top
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     const colors = ['#d62828', '#14213d', '#03045e', '#073b4c', '#ee9b00', 'red', 'blue', 'green', 'yellow', 'purple', 'pink', 'black', 'white', 'linear-gradient(to right, #ff9a9e 0%, #fecfef 99%, #fecfef 100%)',
         'linear-gradient(to right, #a1c4fd 0%, #c2e9fb 100%)',
         'linear-gradient(to right, #667eea 0%, #764ba2 60%)',
@@ -372,7 +377,7 @@ function ShareQuote() {
     return (
         <div className='ShareQuotePage'>
             <Link to="../" onClick={refresh}>
-                <div className="homeButton" style={{marginLeft: '20px' }}>
+                <div className="homeButton qshomebtn" style={{marginLeft: '20px' }}>
                     <ArrowBackIosNewIcon /> Home
                 </div>
             </Link>

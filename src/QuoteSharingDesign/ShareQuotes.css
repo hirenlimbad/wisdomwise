@@ -284,6 +284,11 @@ input[type="range"] {
 }
 
 
+.qshomebtn{
+    margin-top: 10%;
+    margin-left: 5% !important;
+}
+
 .watermark {
     width: 100%;
     padding-top: 2%;
